@@ -7,6 +7,7 @@ public class Burbuja : MonoBehaviour
     public float fuerzaFlotante = 0.5f;
     public float alturaMaxima = 0.5f;
     public float velMov = 1f;
+    public float fuerzaViento = 1f;
 
     private bool llego = false;
 
@@ -15,6 +16,8 @@ public class Burbuja : MonoBehaviour
     public Transform puntoFinal;
 
     private Vector3 posInicialY;
+
+    private CorrienteAire corrienteAire = null;
 
     void Start()
     {
@@ -38,6 +41,11 @@ public class Burbuja : MonoBehaviour
         {
             Mover();
         }
+
+        if (corrienteAire != null)
+        {
+            AplicarViento();
+        }
     }
 
     void Mover()
@@ -49,6 +57,29 @@ public class Burbuja : MonoBehaviour
         if (Vector3.Distance(transform.position, puntoFinal.position) < 0.1f)
         {
             llego = true;
+        }
+    }
+
+    void AplicarViento()
+    {
+        rbBurbuja.AddForce(corrienteAire.direccion.normalized * corrienteAire.fuerzaViento, ForceMode.Force);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Viento"))
+        {
+            corrienteAire = other.GetComponent<CorrienteAire>();
+            Debug.Log("Burbuja entró en la zona de viento");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Viento"))
+        {
+            corrienteAire = null;
+            Debug.Log("Burbuja salió de la zona de viento");
         }
     }
 }
