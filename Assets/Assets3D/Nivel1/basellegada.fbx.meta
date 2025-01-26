@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e721eef2cbfc0044fad8aa2faac768c7
+guid: e204ae08ffb25444ba1d226c78d161d4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,33 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.007
-    second: {fileID: 2100000, guid: 5de9b81ac6118b245a256cb61d63a64a, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: eca0d364ce2cd354d976c76992183984, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.008
-    second: {fileID: 2100000, guid: 4f3715ff9263a334da60196da7471bb5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.009
-    second: {fileID: 2100000, guid: 8236b30eaaeb1bd4db0bda8aca251ab7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.010
-    second: {fileID: 2100000, guid: 84f34356b2a58dd46897f00b78863968, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.011
-    second: {fileID: 2100000, guid: 84d97418441139b4b86e445e7c9640f4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.012
-    second: {fileID: 2100000, guid: c0e5474df6f34fc428f6a042ff567ad3, type: 2}
+      name: Material.002
+    second: {fileID: 2100000, guid: cea93702f73420848a5ba037a93836e5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -65,7 +45,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 0.3
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -120,7 +100,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.001
+    globalScale: 0.003
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
