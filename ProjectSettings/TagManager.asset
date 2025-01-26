@@ -3,19 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Viento
-  - Barrera
-  - Chupador
-  - Burbuja
-=======
-  - MirrorLight
-  - Door
-  - tier1
-  - tier2
-  - tier3
->>>>>>> origin/BlenzzBranch
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -24,9 +12,9 @@ TagManager:
   - Water
   - UI
   - 
-  - DetectionLayer
-  - LightLayer
-  - Clouds
+  - 
+  - 
+  - 
   - 
   - 
   - 
