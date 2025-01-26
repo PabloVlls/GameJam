@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 34371171}
   m_Layer: 0
   m_Name: Chupador
-  m_TagString: Viento
+  m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 1265521111}
   m_Layer: 0
   m_Name: BurbujaPadre
-  m_TagString: Untagged
+  m_TagString: Burbuja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
