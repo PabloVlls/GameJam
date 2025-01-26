@@ -6,6 +6,9 @@ TagManager:
   tags:
   - MirrorLight
   - Door
+  - tier1
+  - tier2
+  - tier3
   layers:
   - Default
   - TransparentFX
