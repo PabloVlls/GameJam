@@ -6,28 +6,21 @@ public class Burbuja : MonoBehaviour
 {
     public float fuerzaFlotante = 0.5f;
     public float alturaMaxima = 0.5f;
-    public float velMov = 1f;
-    public float fuerzaViento = 1f;
-
-    private bool llego = false;
 
     public Rigidbody rbBurbuja;
 
-    public Transform puntoFinal;
-
-    private Vector3 posInicialY;
+    [SerializeField] private bool llego = false;
 
     private CorrienteAire corrienteAire = null;
 
     void Start()
     {
         rbBurbuja = GetComponent<Rigidbody>();
-
-        posInicialY = transform.position;
     }
 
     void FixedUpdate()
     {
+        // Aplicar la fuerza flotante
         if (transform.position.y < alturaMaxima)
         {
             rbBurbuja.AddForce(Vector3.up * fuerzaFlotante, ForceMode.Acceleration);
@@ -37,31 +30,16 @@ public class Burbuja : MonoBehaviour
             rbBurbuja.velocity = new Vector3(rbBurbuja.velocity.x, 0, rbBurbuja.velocity.z);
         }
 
-        if (!llego && puntoFinal != null)
-        {
-            Mover();
-        }
-
+        // Aplicar la corriente de aire si hay una corriente activa
         if (corrienteAire != null)
         {
-            AplicarViento();
+            AplicarCorrienteAire();
         }
     }
 
-    void Mover()
+    void AplicarCorrienteAire()
     {
-        Vector3 nuevaPosicion = Vector3.MoveTowards(transform.position, new Vector3(puntoFinal.position.x, posInicialY.y, puntoFinal.position.z), velMov * Time.deltaTime);
-
-        transform.position = new Vector3(nuevaPosicion.x, transform.position.y, nuevaPosicion.z);
-
-        if (Vector3.Distance(transform.position, puntoFinal.position) < 0.1f)
-        {
-            llego = true;
-        }
-    }
-
-    void AplicarViento()
-    {
+        // Aplicar la fuerza de la corriente de aire
         rbBurbuja.AddForce(corrienteAire.direccion.normalized * corrienteAire.fuerzaViento, ForceMode.Force);
     }
 
@@ -78,6 +56,7 @@ public class Burbuja : MonoBehaviour
     {
         if (other.CompareTag("Viento"))
         {
+            // Aquí no detenemos el movimiento, solo quitamos la corriente de aire actual
             corrienteAire = null;
             Debug.Log("Burbuja salió de la zona de viento");
         }
