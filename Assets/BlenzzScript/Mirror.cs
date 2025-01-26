@@ -60,10 +60,12 @@ public class Mirror : MonoBehaviour
                         rotatingRight = true; // Cambiar dirección
                     }
 
-                    // Actualizar el ángulo actual y rotar el espejo
-                    float clampedRotation = newRotationAngle - currentRotationAngle;
+                    // Actualizar el ángulo actual y rotar el espejo solo en el eje Y
                     currentRotationAngle = newRotationAngle;
-                    transform.Rotate(0f, clampedRotation, 0f);
+
+                    // Asegurarse de que solo se rota sobre el eje Y
+                    Vector3 currentRotation = transform.rotation.eulerAngles;
+                    transform.rotation = Quaternion.Euler(currentRotation.x, currentRotationAngle, currentRotation.z);
                 }
             }
         }

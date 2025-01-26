@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 214659951}
   m_Layer: 0
   m_Name: globo (2)
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 265581412}
   m_Layer: 0
   m_Name: rocas2
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1175,7 +1175,7 @@ GameObject:
   - component: {fileID: 363007006}
   m_Layer: 0
   m_Name: arbusto
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 418996145}
   m_Layer: 0
   m_Name: globo (1)
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1844,7 +1844,7 @@ GameObject:
   - component: {fileID: 554630920}
   m_Layer: 0
   m_Name: banca (1)
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1907,14 +1907,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554630915}
-  m_LocalRotation: {x: -0.6437701, y: -0.29250675, z: -0.29250675, w: 0.64377}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.08, y: 1.8, z: 0.48}
   m_LocalScale: {x: 193.55536, y: 12.94121, z: 4.4054894}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 423976185}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -48.871}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &554630919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2247,7 +2247,7 @@ GameObject:
   - component: {fileID: 648930661}
   m_Layer: 0
   m_Name: banca (3)
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2259,14 +2259,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648930659}
-  m_LocalRotation: {x: -0.14438033, y: -0.69221014, z: -0.6922093, w: 0.1443806}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -1.31, y: 1.8000016, z: -1.87}
   m_LocalScale: {x: 193.55536, y: 12.94121, z: 4.4054894}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 423976185}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -156.436}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!65 &648930661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2368,7 +2368,7 @@ GameObject:
   - component: {fileID: 665256098}
   m_Layer: 0
   m_Name: banca (4)
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2380,14 +2380,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665256096}
-  m_LocalRotation: {x: -0.15429766, y: -0.69006693, z: -0.69006675, w: 0.1542977}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.5432734, y: 1.8, z: -1.3378963}
   m_LocalScale: {x: 193.55536, y: 12.94121, z: 4.4054894}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 423976185}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -154.792}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!65 &665256098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3676,7 +3676,7 @@ GameObject:
   - component: {fileID: 806401316}
   m_Layer: 0
   m_Name: carte2
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3781,7 +3781,7 @@ GameObject:
   - component: {fileID: 817489896}
   m_Layer: 0
   m_Name: arbusto
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3996,7 +3996,7 @@ GameObject:
   - component: {fileID: 886386740}
   m_Layer: 0
   m_Name: 'rocas '
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4081,7 +4081,7 @@ GameObject:
   - component: {fileID: 954660535}
   m_Layer: 0
   m_Name: globo (4)
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4201,7 +4201,7 @@ GameObject:
   - component: {fileID: 990962779}
   m_Layer: 0
   m_Name: arbusto
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4312,7 +4312,7 @@ GameObject:
   - component: {fileID: 1018371904}
   m_Layer: 0
   m_Name: globo (6)
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5390,7 +5390,7 @@ GameObject:
   - component: {fileID: 1206479189}
   m_Layer: 0
   m_Name: globo (5)
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5809,6 +5809,7 @@ GameObject:
   - component: {fileID: 1265521110}
   - component: {fileID: 1265521109}
   - component: {fileID: 1265521111}
+  - component: {fileID: 1265521112}
   m_Layer: 0
   m_Name: BurbujaPadre
   m_TagString: Burbuja
@@ -5876,6 +5877,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1265521112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265521106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d65279c122f61942b3013c407082437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 0
+  lifeDecayRate: 1
+  healthSlider: {fileID: 0}
+  tier1Damage: 20
+  tier2Damage: 10
+  tier3Damage: 100
+  objectToActivate: {fileID: 0}
 --- !u!1 &1267234801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5922,7 +5943,7 @@ GameObject:
   - component: {fileID: 1285517790}
   m_Layer: 0
   m_Name: arbusto
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6461,7 +6482,7 @@ GameObject:
   - component: {fileID: 1331465316}
   m_Layer: 0
   m_Name: globo (7)
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6900,7 +6921,7 @@ GameObject:
   - component: {fileID: 1442421924}
   m_Layer: 0
   m_Name: rocas3
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6983,7 +7004,7 @@ GameObject:
   - component: {fileID: 1479107429}
   m_Layer: 0
   m_Name: flor2
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7499,7 +7520,7 @@ GameObject:
   - component: {fileID: 1722627181}
   m_Layer: 0
   m_Name: arbusto
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8242,7 +8263,7 @@ GameObject:
   - component: {fileID: 1891220596}
   m_Layer: 0
   m_Name: cosa_que_gira
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8373,7 +8394,7 @@ GameObject:
   - component: {fileID: 1970713098}
   m_Layer: 0
   m_Name: Burbuja
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8755,7 +8776,7 @@ GameObject:
   - component: {fileID: 2079725588}
   m_Layer: 0
   m_Name: rocas4
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8840,7 +8861,7 @@ GameObject:
   - component: {fileID: 2093990515}
   m_Layer: 0
   m_Name: globo (3)
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9374,7 +9395,7 @@ GameObject:
   - component: {fileID: 1725133021}
   m_Layer: 0
   m_Name: cosa_que_gira
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9544,7 +9565,7 @@ GameObject:
   - component: {fileID: 3042450880107336938}
   m_Layer: 0
   m_Name: globo
-  m_TagString: Untagged
+  m_TagString: tier1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9838,7 +9859,7 @@ GameObject:
   - component: {fileID: 150694499291756348}
   m_Layer: 0
   m_Name: arbusto
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10111,7 +10132,7 @@ GameObject:
   - component: {fileID: 3476527253940926071}
   m_Layer: 0
   m_Name: flor
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10349,7 +10370,7 @@ GameObject:
   - component: {fileID: 8472593774178700706}
   m_Layer: 0
   m_Name: carte
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10486,14 +10507,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7539870816185488541}
-  m_LocalRotation: {x: -0.6395069, y: -0.3017135, z: -0.30171347, w: 0.63950676}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -4.93, y: 1.8, z: -0.56}
   m_LocalScale: {x: 193.55536, y: 12.94121, z: 4.4054894}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 423976185}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -50.515}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &7209661227594501627
 GameObject:
   m_ObjectHideFlags: 0
@@ -10507,7 +10528,7 @@ GameObject:
   - component: {fileID: 9155009626838854702}
   m_Layer: 0
   m_Name: rocas
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10542,7 +10563,7 @@ GameObject:
   - component: {fileID: 8332781907808728393}
   m_Layer: 0
   m_Name: banca
-  m_TagString: Untagged
+  m_TagString: tier3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
