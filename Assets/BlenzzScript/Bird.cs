@@ -20,7 +20,7 @@ public class Bird : MonoBehaviour
     void Start()
     {
         // Calcular dirección inicial hacia el destino
-        direction = (new Vector3(targetX, transform.position.y, transform.position.z) - transform.position).normalized;
+        direction = (new Vector3(transform.position.x, transform.position.y, targetX ) - transform.position).normalized;
         currentSpeed = normalSpeed;
     }
 
@@ -30,7 +30,7 @@ public class Bird : MonoBehaviour
         Fly();
 
         // Destruir el pájaro si alcanza el destino en X
-        if ((targetX > 0 && transform.position.x >= targetX) || (targetX < 0 && transform.position.x <= targetX))
+        if ((targetX > 0 && transform.position.z >= targetX) || (targetX < 0 && transform.position.z <= targetX))
         {
             Destroy(gameObject);
         }

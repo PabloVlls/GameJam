@@ -36,7 +36,7 @@ public class Balloon : MonoBehaviour
             }
         }
 
-        float swayAmount = 0.5f * Mathf.Sin(Time.time * 2f); // Oscilación suave
+        float swayAmount = 0.1f * Mathf.Sin(Time.time * 2f); // Oscilación suave
         transform.position += new Vector3(swayAmount, 0, 0) * Time.deltaTime;
 
     }
