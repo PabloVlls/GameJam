@@ -40,8 +40,11 @@ public class BirdSpawner : MonoBehaviour
 
         Vector3 spawnPosition = new Vector3(spawnX, spawnY, spawnZ);
 
-        // Instanciar el prefab del pájaro en la posición calculada
-        GameObject newBird = Instantiate(birdPrefab, spawnPosition, Quaternion.identity);
+        // Crear una rotación de 180 grados en el eje Z
+        Quaternion spawnRotation = Quaternion.Euler(0, 0, 180);
+
+        // Instanciar el prefab del pájaro con la rotación calculada
+        GameObject newBird = Instantiate(birdPrefab, spawnPosition, spawnRotation);
 
         // Configurar el destino del pájaro
         Bird birdScript = newBird.GetComponent<Bird>();
@@ -50,8 +53,9 @@ public class BirdSpawner : MonoBehaviour
             birdScript.targetX = birdTargetX;
         }
 
-        Debug.Log("Pájaro generado en posición: " + spawnPosition);
+        Debug.Log("Pájaro generado en posición: " + spawnPosition + " con rotación: " + spawnRotation.eulerAngles);
     }
+
 }
 
 

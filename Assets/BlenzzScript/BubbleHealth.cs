@@ -71,7 +71,7 @@ public class BubbleHealth : MonoBehaviour
         }
     }
 
-    void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         health -= amount;
         health = Mathf.Clamp(health, 0, maxHealth); // Mantener la vida en rango

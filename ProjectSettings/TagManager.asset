@@ -8,10 +8,14 @@ TagManager:
   - Barrera
   - Burbuja
   - tier3
+<<<<<<< HEAD
   - tier1
   - Door
   - tier2
   - MirrorLight
+=======
+  - Barrier
+>>>>>>> origin/BlenzzBranch
   layers:
   - Default
   - TransparentFX
