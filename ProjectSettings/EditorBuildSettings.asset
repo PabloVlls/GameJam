@@ -9,24 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Finals/inicio.unity
     guid: 075b2b8d3187ba141b886e6c83b941b2
   - enabled: 1
-    path: Assets/Scenes/Finals/historia.unity
-    guid: 35b6ae50b2cc16046b7485c48f897f4f
-  - enabled: 1
-    path: Assets/Scenes/Finals/creditos.unity
-    guid: 316fb0caf4255924a826f2e2c3c565d3
-  - enabled: 1
     path: Assets/Scenes/Finals/zonadeniveles.unity
     guid: 2d73c585808bf1442bb0c50d85b4ddd8
   - enabled: 1
-    path: Assets/Scenes/Finals/tutorial1.unity
-    guid: 2f0d2868e4cb7fd429d9abc52733c856
+    path: Assets/Scenes/nivel1.unity
+    guid: afa9d979b3801dd44b7dc196341078ba
   - enabled: 1
-    path: Assets/Scenes/Finals/tutorial2.unity
-    guid: 5d0ce6396416d1143a04337a919c2343
+    path: Assets/Scenes/nivel2.unity
+    guid: 3f372ea41fdcafe438581c6679e000b9
   - enabled: 1
-    path: Assets/Scenes/Finals/tutorial3.unity
-    guid: 4fe60e7cff7185a418b56e8617157532
-  - enabled: 1
-    path: Assets/Scenes/Finals/tutorial4.unity
-    guid: b4d3345dedaed5641a1fcfb1e12a25fd
+    path: Assets/Scenes/Nivel3.unity
+    guid: fb179d5b54cb7724a932421959d6ded2
   m_configObjects: {}

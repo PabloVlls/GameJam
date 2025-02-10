@@ -6,16 +6,26 @@ public class Burbuja : MonoBehaviour
 {
     public float fuerzaFlotante = 0.5f;
     public float alturaMaxima = 0.5f;
+    public float velocidadMovimiento = 0.5f;
+    public float velocidadMaxima = 5f;
 
     public Rigidbody rbBurbuja;
 
-    [SerializeField] private bool llego = false;
-
     private CorrienteAire corrienteAire = null;
+    private Vector3 direccionMovimiento;
 
     void Start()
     {
         rbBurbuja = GetComponent<Rigidbody>();
+        rbBurbuja.useGravity = false;
+    }
+
+    void Update()
+    {
+        float movimientoX = Input.GetAxis("Horizontal");
+        float movimientoZ = Input.GetAxis("Vertical");
+
+        direccionMovimiento = new Vector3(movimientoX, 0, movimientoZ).normalized;
     }
 
     void FixedUpdate()
@@ -30,11 +40,21 @@ public class Burbuja : MonoBehaviour
             rbBurbuja.velocity = new Vector3(rbBurbuja.velocity.x, 0, rbBurbuja.velocity.z);
         }
 
+        if(direccionMovimiento.magnitude > 0)
+        {
+            rbBurbuja.AddForce(direccionMovimiento * velocidadMovimiento, ForceMode.Acceleration);
+        }
+
         // Aplicar la corriente de aire si hay una corriente activa
         if (corrienteAire != null)
         {
             AplicarCorrienteAire();
         }
+
+        Vector3 velocidadActual = rbBurbuja.velocity;
+        velocidadActual.x = Mathf.Clamp(velocidadActual.x, -velocidadMaxima, velocidadMaxima);
+        velocidadActual.z = Mathf.Clamp(velocidadActual.z, -velocidadMaxima, velocidadMaxima);
+        rbBurbuja.velocity = new Vector3(velocidadActual.x, rbBurbuja.velocity.y, velocidadActual.z);
     }
 
     void AplicarCorrienteAire()
@@ -48,7 +68,7 @@ public class Burbuja : MonoBehaviour
         if (other.CompareTag("Viento"))
         {
             corrienteAire = other.GetComponent<CorrienteAire>();
-            Debug.Log("Burbuja entró en la zona de viento");
+            Debug.Log("Burbuja entro en la zona de viento");
         }
     }
 
@@ -56,9 +76,9 @@ public class Burbuja : MonoBehaviour
     {
         if (other.CompareTag("Viento"))
         {
-            // Aquí no detenemos el movimiento, solo quitamos la corriente de aire actual
+            // Aqui no detenemos el movimiento, solo quitamos la corriente de aire actual
             corrienteAire = null;
-            Debug.Log("Burbuja salió de la zona de viento");
+            Debug.Log("Burbuja salio de la zona de viento");
         }
     }
 }
