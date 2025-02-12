@@ -5,27 +5,30 @@ using UnityEngine.UI; // Para usar el Slider
 public class BubbleHealth : MonoBehaviour
 {
     [Header("Vida de la burbuja")]
-    public float maxHealth = 100f; // Vida máxima de la burbuja
+    public float maxHealth = 100f; // Vida mï¿½xima de la burbuja
     public float health;          // Vida actual
-    public float lifeDecayRate = 1f; // Cuánta vida pierde por segundo automáticamente
+    public float lifeDecayRate = 1f; // Cuï¿½nta vida pierde por segundo automï¿½ticamente
 
     [Header("Referencias UI")]
     public Slider healthSlider; // Slider para mostrar la vida
 
-    [Header("Daño por colisión")]
+    [Header("Daï¿½o por colisiï¿½n")]
     public float tier1Damage = 5f;
     public float tier2Damage = 10f;
     public float tier3Damage = 20f;
 
-    [Header("Acción al finalizar")]
+    [Header("Acciï¿½n al finalizar")]
     public GameObject objectToActivate; // Objeto a activar cuando el tiempo llegue a 0
 
-    private bool canTakeDamage = true; // Controla si puede recibir daño
+    private bool canTakeDamage = true; // Controla si puede recibir daï¿½o
 
     void Start()
     {
-        // Inicializar la vida al máximo y configurar el slider
+        // Inicializar la vida al mï¿½ximo y configurar el slider
         health = maxHealth;
+
+        //Debug.Log("Vida"); 
+
         if (healthSlider != null)
         {
             healthSlider.maxValue = maxHealth;
@@ -35,9 +38,9 @@ public class BubbleHealth : MonoBehaviour
 
     void Update()
     {
-        // Reducir vida automáticamente con el tiempo
+        // Reducir vida automï¿½ticamente con el tiempo
         health -= lifeDecayRate * Time.deltaTime;
-        health = Mathf.Clamp(health, 0, maxHealth); // Asegurarse de que no pase de los límites
+        health = Mathf.Clamp(health, 0, maxHealth); // Asegurarse de que no pase de los lï¿½mites
 
         // Actualizar el slider
         if (healthSlider != null)
@@ -50,13 +53,15 @@ public class BubbleHealth : MonoBehaviour
         {
             Die();
         }
+
+        //Debug.Log("Descuento Vida");
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!canTakeDamage) return; // Si no puede recibir daño, salir
+        if (!canTakeDamage) return; // Si no puede recibir daï¿½o, salir
 
-        // Detectar el tag del objeto con el que colisionó
+        // Detectar el tag del objeto con el que colisionï¿½
         switch (collision.gameObject.tag)
         {
             case "tier1":
@@ -80,7 +85,7 @@ public class BubbleHealth : MonoBehaviour
             healthSlider.value = health;
         }
 
-        // Iniciar el cooldown de daño
+        // Iniciar el cooldown de daï¿½o
         StartCoroutine(DamageCooldown());
     }
 
@@ -93,8 +98,8 @@ public class BubbleHealth : MonoBehaviour
 
     void Die()
     {
-        // Lógica para cuando la burbuja muere (desactivar objeto, reiniciar nivel, etc.)
-        Debug.Log("La burbuja ha muerto.");
+        // Lï¿½gica para cuando la burbuja muere (desactivar objeto, reiniciar nivel, etc.)
+        //Debug.Log("La burbuja ha muerto.");
         Destroy(gameObject); // Destruye el objeto de la burbuja
         if (objectToActivate != null)
         {
@@ -102,6 +107,6 @@ public class BubbleHealth : MonoBehaviour
         }
 
         FindObjectOfType<CountdownTimer>().isPlayerDead = true;
-        Debug.Log("El jugador ha muerto. Contador detenido.");
+        //Debug.Log("El jugador ha muerto. Contador detenido.");
     }
 }

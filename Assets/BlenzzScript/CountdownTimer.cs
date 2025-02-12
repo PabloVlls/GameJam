@@ -4,13 +4,13 @@ using UnityEngine.UI; // Para manejar elementos del Canvas como Text
 public class CountdownTimer : MonoBehaviour
 {
     [Header("Tiempo del contador")]
-    public float maxTime = 60f; // Tiempo máximo en segundos (modificable en el inspector)
+    public float maxTime = 60f; // Tiempo mï¿½ximo en segundos (modificable en el inspector)
     private float currentTime; // Tiempo actual
 
     [Header("Referencias UI")]
     public Text timerText; // Texto en el Canvas para mostrar el tiempo
 
-    [Header("Acción al finalizar")]
+    [Header("Acciï¿½n al finalizar")]
     public GameObject objectToActivate; // Objeto a activar cuando el tiempo llegue a 0
 
     [Header("Colores del texto")]
@@ -20,14 +20,16 @@ public class CountdownTimer : MonoBehaviour
     [Header("Estado del jugador")]
     public bool isPlayerDead = false; // Controla si el jugador ha muerto
 
-    private bool isTimeOver = false; // Para asegurarnos de que la acción ocurra solo una vez
+    private bool isTimeOver = false; // Para asegurarnos de que la acciï¿½n ocurra solo una vez
 
     void Start()
     {
-        // Inicializar el tiempo actual al tiempo máximo
+        // Inicializar el tiempo actual al tiempo mï¿½ximo
         currentTime = maxTime;
 
-        // Asegurarse de que el objeto a activar esté desactivado al inicio
+        //Debug.Log("Conteo");
+
+        // Asegurarse de que el objeto a activar estï¿½ desactivado al inicio
         if (objectToActivate != null)
         {
             objectToActivate.SetActive(false);
@@ -36,7 +38,7 @@ public class CountdownTimer : MonoBehaviour
 
     void Update()
     {
-        // Si el tiempo se acabó o el jugador está muerto, no hacer nada más
+        // Si el tiempo se acabï¿½ o el jugador estï¿½ muerto, no hacer nada mï¿½s
         if (isTimeOver || isPlayerDead) return;
 
         // Reducir el tiempo actual
@@ -46,7 +48,7 @@ public class CountdownTimer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-            EndTimer(); // Llamar a la acción cuando el tiempo llegue a 0
+            EndTimer(); // Llamar a la acciï¿½n cuando el tiempo llegue a 0
         }
 
         // Actualizar el texto del contador en el Canvas
@@ -54,6 +56,8 @@ public class CountdownTimer : MonoBehaviour
 
         // Actualizar el color del texto
         UpdateTimerColor();
+
+        //Debug.Log("Estoy contando");
     }
 
     void UpdateTimerText()
@@ -76,14 +80,14 @@ public class CountdownTimer : MonoBehaviour
             objectToActivate.SetActive(true);
         }
 
-        // Puedes agregar más lógica aquí, como mostrar un mensaje o finalizar el juego
-        Debug.Log("¡El tiempo se ha acabado!");
+        // Puedes agregar mï¿½s lï¿½gica aquï¿½, como mostrar un mensaje o finalizar el juego
+        //Debug.Log("ï¿½El tiempo se ha acabado!");
     }
 
     void UpdateTimerColor()
     {
-        // Interpolar el color entre blanco y rojo en función del porcentaje de tiempo restante
-        float t = 1f - (currentTime / maxTime); // Progresión inversa (de 1 a 0)
+        // Interpolar el color entre blanco y rojo en funciï¿½n del porcentaje de tiempo restante
+        float t = 1f - (currentTime / maxTime); // Progresiï¿½n inversa (de 1 a 0)
         timerText.color = Color.Lerp(startColor, endColor, t);
     }
 }

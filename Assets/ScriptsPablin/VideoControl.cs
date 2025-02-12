@@ -7,8 +7,17 @@ public class VideoControl : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public GameObject tutorial;
+    public GameObject video;
 
-    // Start is called before the first frame update
+    void Update()
+    {
+        if(Input.GetKeyDown("space"))
+        {
+            videoPlayer.Stop();
+            tutorial.SetActive(true);
+        }
+    }
+
     public void InicioAnim()
     {
         videoPlayer.loopPointReached += OnVideoEnd;
