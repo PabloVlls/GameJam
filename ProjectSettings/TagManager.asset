@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - tier1
+  - tier3
+  - Burbuja
+  - Viento
+  - Ganar
   layers:
   - Default
   - TransparentFX

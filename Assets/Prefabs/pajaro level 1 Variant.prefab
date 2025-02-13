@@ -103,8 +103,8 @@ MonoBehaviour:
   normalSpeed: 5
   scaredSpeedMultiplier: 2
   targetX: 10
-  flapAmplitude: 0.5
-  flapFrequency: 2
+  flapAmplitude: 0
+  flapFrequency: 0
 --- !u!65 &6012719152836794938
 BoxCollider:
   m_ObjectHideFlags: 0

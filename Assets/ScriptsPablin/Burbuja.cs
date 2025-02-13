@@ -11,6 +11,8 @@ public class Burbuja : MonoBehaviour
 
     public Rigidbody rbBurbuja;
 
+    public GameObject ganar;
+
     private CorrienteAire corrienteAire = null;
     private Vector3 direccionMovimiento;
 
@@ -19,7 +21,7 @@ public class Burbuja : MonoBehaviour
         rbBurbuja = GetComponent<Rigidbody>();
         rbBurbuja.useGravity = false;
         //Debug.Log("Entre:" + gameObject.activeSelf);
-
+        ganar.SetActive(false);
     }
 
     void Update()
@@ -47,9 +49,41 @@ public class Burbuja : MonoBehaviour
             rbBurbuja.AddForce(direccionMovimiento * velocidadMovimiento, ForceMode.Acceleration);
         }
 
+        if (corrienteAire != null)
+        {
+            AplicarCorrienteAire();
+        }
+
         Vector3 velocidadActual = rbBurbuja.velocity;
         velocidadActual.x = Mathf.Clamp(velocidadActual.x, -velocidadMaxima, velocidadMaxima);
         velocidadActual.z = Mathf.Clamp(velocidadActual.z, -velocidadMaxima, velocidadMaxima);
         rbBurbuja.velocity = new Vector3(velocidadActual.x, rbBurbuja.velocity.y, velocidadActual.z);
+    }
+
+    void AplicarCorrienteAire()
+    {
+        rbBurbuja.AddForce(corrienteAire.direccion.normalized * corrienteAire.fuerzaViento, ForceMode.Force);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Viento"))
+        {
+            corrienteAire = other.GetComponent<CorrienteAire>();
+            Debug.Log("Burbuja entró en la zona de viento");
+        }
+        if(other.CompareTag("Ganar"))
+        {
+            ganar.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Viento"))
+        {
+            corrienteAire = null;
+            Debug.Log("Burbuja salió de la zona de viento");
+        }
     }
 }
